@@ -1,0 +1,123 @@
+/* Lab 4: include padding and borders in declared widths. */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #185a83;
+}
+
+body {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #253345;
+    background-color: #f5f8fc;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 200%;
+}
+
+h2 {
+    color: #653c85;
+    font-size: 150%;
+}
+
+p {
+    color: #253345;
+}
+
+.important {
+    font-weight: bold;
+    color: #653c85;
+}
+
+#copyright {
+    font-size: 80%;
+    color: var(--primary-color);
+}
+
+footer p {
+    text-align: right;
+}
+
+header {
+    display: flow-root;
+    padding-bottom: .75em;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+img {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: .75em;
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    clear: both;
+}
+
+a:link {
+    color: var(--primary-color);
+}
+
+a:visited {
+    color: #653c85;
+}
+
+a:hover,
+a:focus {
+    color: #9b3518;
+    text-decoration: underline;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+/* Lab 4: reusable cards for the original content. */
+.content-box {
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+/* Only the home page uses the two-column layout. */
+.page-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 1em;
+}
+
+.main-content {
+    flex-basis: 70%;
+    min-width: 0;
+    padding-right: 1em;
+    overflow-wrap: anywhere;
+}
+
+.sidebar {
+    flex-basis: 30%;
+    min-width: 0;
+    padding: 1.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    background-color: #eaf2f8;
+    overflow-wrap: anywhere;
+}

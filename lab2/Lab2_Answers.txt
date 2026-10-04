@@ -1,0 +1,32 @@
+CIS-130 Lab 2: Applying CSS to HTML
+Haneen
+
+1. The purpose of CSS is to control the appearance of a webpage, including its fonts, colors, spacing, and layout, while HTML provides its content and structure.
+
+2. An external stylesheet lets multiple HTML pages share the same styles. Editing one CSS file updates all pages that link to it and keeps styling separate from the HTML content.
+
+3. In the rule h1 { color: blue; }, h1 is the selector that chooses the first-level headings, color is the property being changed, and blue is the value assigned to that property.
+
+4. A type selector selects elements by their HTML tag name, such as h2. A class selector selects elements with a particular class and can apply to several elements. An ID selector selects the element with a particular ID, which should be unique within the page.
+
+5. The period in .important identifies it as a class selector, so it selects elements whose class attribute includes important.
+
+6. The # in #copyright identifies it as an ID selector, so it selects the element whose id attribute is copyright.
+
+7. An absolute unit has a fixed relationship to other absolute CSS units, while a relative unit depends on another measurement, such as a font size. For example, px is an absolute CSS unit, while em and % are relative units.
+
+8. The measurement 20px is absolute, 2em is relative, and 150% is relative. For font-size, em and % are based on the parent element's font size; for margins, em is based on the element's own font size.
+
+9. The footer p selector selects every paragraph that is a descendant of a footer element, including paragraphs nested inside other elements within that footer.
+
+10. The declaration float: left places an element on the left side of its containing area and allows following text and inline content to wrap around its right side. The declaration clear: both makes the main content begin below earlier floats on either side.
+
+11. The selector a:hover applies when a pointer is over a link, while a:focus applies when a link has input focus, such as when someone reaches it by pressing Tab.
+
+12. The :hover and :focus states should generally receive equivalent formatting so that keyboard users receive visual feedback comparable to the feedback provided to mouse users.
+
+13. A CSS custom property is a named value that begins with two hyphens, such as --primary-color. It can be declared once and reused in CSS declarations.
+
+14. Writing var(--primary-color) reuses the value of the custom property. Changing that value updates all declarations that reference it, which makes the color scheme easier to maintain consistently.
+
+15. The #copyright selector is more specific than the p selector because an ID selector has greater specificity than a type selector. When otherwise equal declarations conflict, the declaration from #copyright wins.

@@ -1,0 +1,157 @@
+CIS-130 Lab 3 AI Log
+
+AI Tool Used:
+ChatGPT
+
+Website Topic:
+Yoga: My Favorite Hobby
+
+Planning Prompt:
+My topic is Yoga: My Favorite Hobby. Using the CIS-130 Lab 3 requirements, make a simple plan for index.html and details.html. Tell me what content should go on each page and give me a file/folder checklist. Keep it beginner-friendly. Do not write HTML or CSS yet.
+Main CLEAR Prompt:
+
+I am a beginner CIS-130 student creating a two-page website about
+Yoga: My Favorite Hobby.
+
+I need index.html, details.html, and one external stylesheet called
+styles/main.css.
+
+The website should use beginner-friendly HTML and CSS. It should include
+semantic HTML, headings, paragraphs, lists, links, a yoga image with useful
+alt text, a class, an ID, and relative links between the two pages.
+
+For CSS, I need type, class, ID, descendant, and pseudo-class selectors.
+I also need hover and focus styles, different CSS measurements, a custom
+property, margins or padding, a border, float, and clear.
+
+Do not use JavaScript, Bootstrap, Tailwind, Grid, or other advanced
+techniques. Keep the code simple enough for a beginner CIS-130 student
+to understand.
+
+For now, do not generate all the files at once.
+Adaptive Prompt:
+
+Review my CSS for my Yoga: My Favorite Hobby website.
+The website is working, but I want to make sure my CSS is still
+beginner-friendly and meets the CIS-130 Lab 3 requirements.
+
+Check whether I have type, class, ID, descendant, and pseudo-class
+selectors, hover and focus styles, different CSS measurements,
+a custom property with var(), margins or padding, a border,
+float, and clear.
+
+Do not rewrite my CSS. Tell me only if something required is missing.
+Agentic-Style Review Prompt:
+
+Act as a reviewer for my CIS-130 Lab 3 website.
+
+Review my two-page Yoga: My Favorite Hobby website against the Lab 3
+requirements. Check the HTML structure, semantic elements, links, image,
+CSS selectors, measurements, custom property, float, clear, and external
+stylesheet.
+
+Do not rewrite or change my code. Give me a short checklist of anything
+I should verify or fix myself before submitting the lab.
+Debugging / Code Review Prompt:
+
+Review my index.html, details.html, and styles/main.css for beginner-level
+HTML and CSS errors.
+
+Check for broken relative links, incorrect image paths, missing closing tags,
+stylesheet linking problems, and simple CSS mistakes.
+
+Do not rewrite my website. Explain any problems you find and tell me what
+I should check or fix myself.
+FOLLOW-UP REVIEW OF THE EXISTING PROJECT
+
+Record accuracy:
+The prompts above were already present in this file before this review.
+Their earlier responses were not available. They have been preserved rather
+than replaced with an invented conversation. The original log names ChatGPT;
+this follow-up used the Codex coding assistant. This record does not claim
+that a particular free plan was used in the follow-up.
+
+Actual follow-up request from the student:
+"Now lab 3 , i did some work check  everything , first read the lab doc
+[Lab 3 - CIS 130.docx](<Lab 3 - CIS 130.docx>) and check my work , fix and
+update based on that , and createa everything as he asked answer all quesion
+in the txt hile he asked"
+
+Review plan and checklist:
+1. Read the assignment and compare both HTML files with its content,
+   metadata, semantic structure, relative paths, and stylesheet requirements.
+2. Check CSS selectors, units, colors, typography, spacing, borders,
+   custom properties, float, clear, and matching hover/focus styles.
+3. Check the actual image, repair problems, and retain the existing topic.
+4. Validate the files and test image loading, navigation, and link states.
+5. Complete written answers and document the findings and remaining student
+   activities honestly.
+
+Debugging diagnosis and smallest useful corrections:
+The original a:visited color was #f5f1f8, which also was the body background.
+The diagnosis was correct: visited links could disappear into the page.
+The visited color was changed to #6b5b95, and the normal link color was
+changed to a darker pink, #91416a. Matching hover and focus rules now include
+a visible outline and background.
+The image floated right but had its horizontal margin on the right. Moving
+that margin to the left separates the image from the text beside it.
+The original clear on main could not clear an image inside main. Each section
+now clears earlier floats and contains its own floated image with
+"display: flow-root". This rule makes the section's box include the floated
+image, so its border surrounds the image and following sections stay below.
+The image named yoga.jpg contained AVIF data. It was converted to a real JPEG
+while keeping its filename and appearance. Its alt text now describes the
+actual floral illustration rather than suggesting a photograph.
+
+Reflection on a useful AI contribution:
+The assistant compared the existing website with the assignment and found
+issues that a simple list of required CSS properties would miss. In
+particular, it identified the invisible visited links and the mismatched
+image format while preserving the yoga topic and purple design.
+
+Reflection on a weak choice and the revision:
+The existing CSS included all the main selector types, but its visited-link
+color was still a poor choice because it matched the background. Checking
+only whether a pseudo-class exists is not enough; its effect also needs to
+be inspected. The earlier Adaptive prompt focused on missing requirements,
+so a stronger future prompt would also ask about readability and float
+behavior. The earlier response is unavailable, so an exact before-and-after
+comparison of that response cannot be claimed.
+
+Suggested future Adaptive prompt (not a historical prompt already sent):
+"The visited links blend into my background, and my right-floating image
+needs better spacing. Revise only the link colors and float-related rules.
+Keep the purple yoga design and beginner-friendly external CSS. Use matching
+hover and focus styles and explain why each changed rule is needed."
+
+Ownership and personal work:
+The student's original topic, two-page structure, text, image choice, and
+purple design were retained. The fixes made during this follow-up were
+AI-assisted and must not be counted as the lab's independent manual edits.
+The student must confirm or complete at least three meaningful HTML changes
+and five meaningful CSS changes made without AI. The student also needs to
+read the generated answers, use their own words, and complete or confirm the
+hands-on Developer Tools exercise. No personal actions have been invented.
+
+Verification results from this follow-up:
+- index.html: W3C Nu HTML validator returned an empty messages list.
+- details.html: W3C Nu HTML validator returned an empty messages list.
+- Chrome loaded the image and shared stylesheet successfully.
+- Navigation worked from index.html to details.html and back.
+- Hover and keyboard focus produced matching colors, backgrounds, outlines,
+  and text decoration.
+- Both pages had no horizontal overflow at widths of 1280px and 375px.
+- No JavaScript page errors occurred during the local page checks.
+- The Yoga Journal external link returned HTTP 200 in Chrome.
+- A temporary heading color change disappeared on refresh in an automated
+  browser test. This was not a claim that the student used the Styles panel.
+- The W3C CSS validator returned HTTP 429 (Too Many Requests) for both
+  submission attempts. Official CSS validation remains unconfirmed. Use
+  https://jigsaw.w3.org/css-validator/ and upload styles/main.css when the
+  service is available, then correct any errors before submitting.
+
+Additional answer file:
+Lab3_Answers.txt contains answers to all eight questions within the lab and
+all thirteen questions in Part 23. The assignment explicitly names ai-log.txt
+for the AI record but does not name a separate answer file; this extra text
+file keeps the written answers easy to find.
