@@ -1,0 +1,245 @@
+/* Lab 4: include padding and borders in declared widths. */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #185a83;
+}
+
+body {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+    color: #253345;
+    background-color: #f5f8fc;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 200%;
+}
+
+h2 {
+    color: #653c85;
+    font-size: 150%;
+}
+
+p {
+    color: #253345;
+}
+
+.important {
+    font-weight: bold;
+    color: #653c85;
+}
+
+#copyright {
+    font-size: 80%;
+    color: var(--primary-color);
+}
+
+footer p {
+    text-align: right;
+}
+
+header {
+    display: flow-root;
+    padding-bottom: .75em;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+img {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: .75em;
+    width: 45%;
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    clear: both;
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+}
+
+a:link {
+    color: var(--primary-color);
+}
+
+a:visited {
+    color: #653c85;
+}
+
+a:hover,
+a:focus {
+    color: #9b3518;
+    text-decoration: underline;
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+/* Lab 4: reusable cards for the original content. */
+.content-box {
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+/* Only the home page uses the two-column layout. */
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1em;
+}
+
+.main-content {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.sidebar {
+    min-width: 0;
+    padding: 1.25em;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
+    background-color: #eaf2f8;
+    overflow-wrap: anywhere;
+}
+
+/* Lab 6: shared navigation */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keep existing list styles from affecting the menu. */
+.navbar li {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar a {
+    display: block;
+    padding: .75em 1em;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a.current {
+    background-color: #eaf2f8;
+    color: #253345;
+    font-weight: bold;
+}
+
+.navbar a:hover,
+.navbar a:focus-visible {
+    background-color: #653c85;
+    color: white;
+    text-decoration: underline;
+}
+
+.navbar a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -4px;
+}
+
+/* Keep the submenu in the page flow on narrow screens. */
+.menu > li {
+    position: relative;
+}
+
+.submenu {
+    display: block;
+    position: static;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--primary-color);
+}
+
+.has-submenu:hover > .submenu,
+.has-submenu:focus-within > .submenu {
+    display: block;
+}
+
+/* Lab 7: use two columns and a horizontal menu on wider screens. */
+@media screen and (min-width: 768px) {
+    .page-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .main-content {
+        flex: 2;
+    }
+
+    .sidebar {
+        flex: 1;
+    }
+
+    .menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        min-width: 11rem;
+    }
+}
+
+/* Lab 7: cards respond to their container's available width. */
+.card-panel {
+    container-type: inline-size;
+    container-name: cards;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    padding: 1rem;
+    border: 1px solid #777;
+}
+
+@container cards (min-width: 500px) {
+    .card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 45%;
+    }
+}
